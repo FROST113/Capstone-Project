@@ -1,0 +1,164 @@
+nav.navbar.navbar-expand-lg.bg-body-tertiary.bg-dark {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+a.nav-link.active {
+  color: darkgray !important;
+}
+
+a.nav-link {
+  color: #fff;
+}
+
+a.nav-link:hover {
+  color: lightgray;
+}
+
+.intro {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.gamingWrapper {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.container.game1 {
+  padding: 0px;
+  background-color: #F1F1EE;
+  text-align: left;
+  padding: 5% 0% 5% 0%;
+}
+
+.container.game2 {
+  padding: 0px;
+  background-color: #fff;
+  text-align: left;
+  padding: 5% 0% 5% 0%;
+}
+
+.container.game3 {
+  padding: 0px;
+  background-color: #F1F1EE;
+  text-align: left;
+  padding: 5% 0% 5% 0%;
+}
+
+.container.game4 {
+  padding: 0px;
+  background-color: #fff;
+  text-align: left;
+  padding: 5% 0% 5% 0%;
+}
+
+.container.game5 {
+  padding: 0px;
+  background-color: #F1F1EE;
+  text-align: left;
+  padding: 5% 0% 5% 0%;
+}
+
+img.gameImg {
+  width: 100%;
+  height: auto;
+}
+
+.col-6.textCol {
+  padding: 10px 50px;
+}
+
+button.saveBtn {
+  border: none;
+  font-size: 40px;
+  margin-left: 2%;
+  margin-top: -3%;
+  background-color: transparent;
+}
+
+img.bookImg {
+  width: 40%;
+  height: auto;
+  display: grid;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+img.profilePhoto {
+  width: 25%;
+  height: auto;
+  border-radius: 50%;
+  margin: 25px auto;
+  background-color: black;
+}
+
+.imgBackground {
+  background-color: black;
+  text-align: center;
+  background-image: url(./images/135806122_396317044969495_4030486684555381102_n.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 0px 10px 10px;
+}
+
+i.fa-solid.fa-circle-check.myIcon {
+  font-size: 40px;
+  margin: 0 auto;
+  color: darkgreen;
+}
+
+table.tg {
+  margin: 35px auto;
+}
+
+a.customLink {
+  text-decoration: none;
+  color: darkorange;
+}
+
+.form-check {
+  display: inline-flex !important;
+  margin: 15px 15px;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+label.form-check-label {
+  margin-left: 20px;
+}
+
+button.btn.btn-primary.mb-2.subBtn {
+  width: 40%;
+  background-color: darkorange;
+  border-color: darkorange;
+}
+
+a.btn.btn-primary.aboutMeBtn {
+  width: 40%;
+  background-color: darkorange;
+  border-color: darkorange;
+}
+
+.card.text-center.welcomeBanner {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-animation {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */

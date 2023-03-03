@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>My Hobbies</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- NavBar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About Me</a>
+              </li>
+              <li   class="nav-item dropdown">
+                <a class="nav-link" href="#">Other Projects</a>
+                <ul>
+                  <li class="nav-item"><a class="nav-link" href="#">Projects 1</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Projects 2</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Projects 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./savedArticles.html">My Saved Articles</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- NavBar -->
+
+    <div class="container">
+
+    <!-- Welcome Banner -->
+
+
+        <div class="welcomeWrapper">
+
+    <div class="card text-center welcomeBanner">
+        <div class="card-body">
+          <h5 class="card-title">Welcome</h5>
+          <p class="card-text">This site showcases my two favorite hobbies Gaming and Reading. I enjoy great stories and I truly believe that games and books have some of the richest and deepest forms of story telling out there. I will be feathering my top five games and books here on the home page but for more information on me please click the button below to go to my about page.</p>
+          <a id="myBtn" href="./about.html" class="btn btn-primary aboutMeBtn">About Me</a>
+        </div>
+      </div>
+
+        </div>
+
+    <!-- Welcome Banner -->
+
+
+    <!-- Gaming Section -->
+        <div class="gamingWrapper">
+
+          <div class="intro">
+            <h2 class="mainHeading">GAMING</h2>
+            <h6 class="subHeading">This section will showcase my top five games of all time. These games are art in there own right with worlds that are beautiful, horrifying and magical. The stories and themes of these games are beyond masterclass.</h6>
+          </div>
+
+            <div class="container game1 fade-in" id="article-1">
+              <button class="saveBtn" onclick="saveForLater(1)"><i class="fa-solid fa-floppy-disk"></i></button>
+              <button class="saveBtn" onclick="addLike(1)"><i class="fa-solid fa-thumbs-up"></i></button>
+              <span id="likeCount1">0</span>
+                <div class="row">
+                  <div class="col-6 textCol">
+                    <h2 class="gameMainText">BIOSHOCK</h2>
+                    <h4 class="gameSubText">A philosophical deep dive</h4>
+                    <p class="gameDiscript">Set in the underwater city of Rapture this 1st person shooter is packed full of action and philosophical meaning. The creator Ken Levine was heavily inspired by the writer Ayn Rand and her views on Objectivism. You play as Jack a silent protagonist that survives a plane crash in the middle of the atlantic ocean. You find a mysterious lighthouse that serves as the gateway to this under water utopian city of Rapture. The city is now in ruin thanks to a bloody civil war between the founder of the city Andrew Ryan and a working class revolutionary named Atlas. Your goal is to survive this war torn city full of mutated citizens thanks to a miracle drug called Adam. This game explores themes of the ideology of Objectivism and freewill. If you are looking for a fun and thought provoking game you can not go wrong with BIOSHOCK.</p>
+                  </div>
+                  <div class="col-6">
+                    <img class="gameImg" src="./images/fd0387cc9697aedc4f6c179b7dfb6f70.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="container game2 fade-in"  id="article-2">
+                <button class="saveBtn" onclick="saveForLater(2)"><i class="fa-solid fa-floppy-disk"></i></button>
+                <button class="saveBtn" onclick="addLike(2)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <span id="likeCount2">0</span>
+                <div class="row">
+                  <div class="col-6">
+                    <img class="gameImg" src="./images/14181_dead_space_1.jpg" alt="">
+                  </div>
+                  <div class="col-6 textCol">
+                    <h2 class="gameMainText">DEAD SPACE</h2>
+                    <h4 class="gameSubText">Survival horror at it's best</h4>
+                    <p class="gameDiscript">This 3rd person survival horror shooter puts you in the shoes of Isaac Clarke a engineer sent to the USG Ishimura for repairs after the ship sent a distress call. After he and his team arrive a true nightmare unfolds when the discover that the ship is overrun with monsters originally the crew of the ship now twisted into Necromorphs. The game shows what humans will do for survival with themes of religion and fanaticism playing a role and the toll of such horrors on the human mind. The game was released back in 2008 but recently received a remake for the current generation of consoles. If you enjoy horror than this is a must play game.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container game3 fade-in"  id="article-3">
+                <button class="saveBtn" onclick="saveForLater(3)"><i class="fa-solid fa-floppy-disk"></i></button>
+                <button class="saveBtn" onclick="addLike(3)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <span id="likeCount3">0</span>
+                <div class="row">
+                  <div class="col-6 textCol">
+                    <h2 class="gameMainText">RED DEAD REDEMPTION 2</h2>
+                    <h4 class="gameSubText">An Open world you want to get lost in</h4>
+                    <p class="gameDiscript">The story is set in a fictionalized representation of the United States in 1899 and follows the exploits of outlaw Arthur Morgan, a member of the Van der Linde gang, who must deal with the decline of the Wild West whilst attempting to survive against government forces, rival gangs, and other adversaries. Arthur Morgan is a deep and complex character and considered by many to be one of the greatest protagonists in gaming.</p>
+                  </div>
+                  <div class="col-6">
+                    <img class="gameImg" src="./images/25SUDERMAN-superJumbo.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="container game4 fade-in"  id="article-4">
+                <button class="saveBtn" onclick="saveForLater(4)"><i class="fa-solid fa-floppy-disk"></i></button>
+                <button class="saveBtn" onclick="addLike(4)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <span id="likeCount4">0</span>
+                <div class="row">
+                  <div class="col-6">
+                    <img class="gameImg" src="./images/3248285-gowps4_screen_stonemason01_e32017_1497330594.jpg" alt="">
+                  </div>
+                  <div class="col-6 textCol">
+                    <h2 class="gameMainText">GOD OF WAR (2018)</h2>
+                    <h4 class="gameSubText">The first chapter to a Norse epic.</h4>
+                    <p class="gameDiscript">A sequel/reboot to the amazing God Of War trilogy. You are placed back in the shoes of Kratos after the destruction of the Greek Pantheon of Gods. He is now in the nine realms of the Norse Gods. Kratos is a father again with a son named Atreus. After his wife passes away both Kratos and Atreus must journey to the highest peak in all the nine reals to spread the ashes of Faye. Their journey is long and hard filled with monsters and Norse Gods standing in their way. The story shows the beauty of this world and the growth between a father and a son getting to know one another. God of war won the game of the year award back in 2018 and one can see why this is truly a masterpiece.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container game5 fade-in"  id="article-5">
+                <button class="saveBtn" onclick="saveForLater(5)"><i class="fa-solid fa-floppy-disk"></i></button>
+                <button class="saveBtn" onclick="addLike(5)"><i class="fa-solid fa-thumbs-up"></i></button>
+                <span id="likeCount5">0</span>
+                <div class="row">
+                  <div class="col-6 textCol">
+                    <h2 class="gameMainText">GOD OF WAR RAGNAROK</h2>
+                    <h4 class="gameSubText">The conclusion to a Norse epic</h4>
+                    <p class="gameDiscript">The sequel to GOD OF WAR (2018) and the conclusion to the Norse Saga takes everything from the fist game and dials everything to 11. The world is falling apart thanks to Ragnarok but still has a extreme beauty to it. Kratos will lead the armies of the other realms against Odin, Thor, and the army of Asgard. The armies include the Elves, the dead and the Vanir. The battle between Thor and Jörmungandr will still occur in which the God of Thunder will strike the World Serpent, thus sending Jörmungandr back in time.</p>
+                  </div>
+                  <div class="col-6">
+                    <img class="gameImg" src="./images/God-Of-War-Ragnarok.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+    <!-- Gaming Section -->
+
+
+    <!-- Book Section -->
+
+    <div class="gamingWrapper">
+
+      <div class="intro">
+        <h2 class="mainHeading">BOOKS</h2>
+        <h6 class="subHeading">This section will showcase my top five novels of all time. A mix of fantasy, si-fi, fiction and an absolute classic these books are amazing and have left a lasting legacy to the way we consume stories.</h6>
+      </div>
+
+        <div class="container game1 fade-in"  id="article-6">
+          <button class="saveBtn" onclick="saveForLater(6)"><i class="fa-solid fa-floppy-disk"></i></button>
+          <button class="saveBtn" onclick="addLike(6)"><i class="fa-solid fa-thumbs-up"></i></button>
+          <span id="likeCount6">0</span>
+            <div class="row">
+              <div class="col-6 textCol">
+                <h2 class="gameMainText">CATCH 22</h2>
+                <h4 class="gameSubText">Surviving the madness of war, one paradox at a time.</h4>
+                <p class="gameDiscript">"Catch-22" is a satirical novel by Joseph Heller that follows the journey of Yossarian, a US Air Force bomber pilot, as he tries to survive in a war that is never-ending. The novel is set during World War II and is known for its dark humor and its portrayal of the insanity and absurdity of war.</p>
+              </div>
+              <div class="col-6">
+                <img class="bookImg" src="./images/91Bk2JnHJHL.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="container game2 fade-in"  id="article-7">
+            <button class="saveBtn" onclick="saveForLater(7)"><i class="fa-solid fa-floppy-disk"></i></button>
+            <button class="saveBtn" onclick="addLike(7)"><i class="fa-solid fa-thumbs-up"></i></button>
+            <span id="likeCount7">0</span>
+            <div class="row">
+              <div class="col-6">
+                <img class="bookImg" src="./images/51Pb-OAREFL._SX327_BO1,204,203,200_.jpg" alt="">
+              </div>
+              <div class="col-6 textCol">
+                <h2 class="gameMainText">AMERICAN GODS</h2>
+                <h4 class="gameSubText">A journey through America's beliefs, where the old gods and the new collide.</h4>
+                <p class="gameDiscript">"American Gods" is a fantasy novel by Neil Gaiman that follows the journey of ex-convict Shadow Moon as he becomes embroiled in a battle between the old gods of mythology and the new gods of technology and media. The novel explores themes of belief, power, and identity as Shadow travels across America and encounters various gods and supernatural beings.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container game3 fade-in"  id="article-8">
+            <button class="saveBtn" onclick="saveForLater(8)"><i class="fa-solid fa-floppy-disk"></i></button>
+            <button class="saveBtn" onclick="addLike(8)"><i class="fa-solid fa-thumbs-up"></i></button>
+            <span id="likeCount8">0</span>
+            <div class="row">
+              <div class="col-6 textCol">
+                <h2 class="gameMainText">DUNE</h2>
+                <h4 class="gameSubText">A battle for control of a valuable desert planet, where the fate of humanity rests on the sands of Arrakis.</h4>
+                <p class="gameDiscript">"Dune" is a science fiction novel by Frank Herbert that is set in a distant future and tells the story of Paul Atreides, a young man who becomes embroiled in a battle for control of the desert planet Arrakis. Arrakis is the only source of a valuable substance called "spice," and the various factions vying for control of the planet are willing to do whatever it takes to get it. "Dune" explores themes of politics, religion, ecology, and human evolution, and has become one of the most acclaimed and influential works in the science fiction genre.</p>
+              </div>
+              <div class="col-6">
+                <img class="bookImg" src="./images/OliverAllison_DuneYACover(150).jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="container game4 fade-in"  id="article-9">
+            <button class="saveBtn" onclick="saveForLater(9)"><i class="fa-solid fa-floppy-disk"></i></button>
+            <button class="saveBtn" onclick="addLike(9)"><i class="fa-solid fa-thumbs-up"></i></button>
+            <span id="likeCount9">0</span>
+            <div class="row">
+              <div class="col-6">
+                <img class="bookImg" src="./images/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg" alt="">
+              </div>
+              <div class="col-6 textCol">
+                <h2 class="gameMainText">A SONG OF ICE AND FIRE SERIES</h2>
+                <h4 class="gameSubText">A tale of politics, power, and the paranormal in the Seven Kingdoms of Westeros.</h4>
+                <p class="gameDiscript">"A Song of Ice and Fire" is a series of high fantasy novels by George R.R. Martin that takes place in the Seven Kingdoms of Westeros. The series follows a large ensemble of characters as they navigate political intrigue, war, and the threat of the supernatural forces beyond the Wall. The series is known for its complex world-building, intricate political maneuvering, and shocking twists and turns</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container game5 fade-in"  id="article-10">
+            <button class="saveBtn" onclick="saveForLater(10)"><i class="fa-solid fa-floppy-disk"></i></button>
+            <button class="saveBtn" onclick="addLike(10)"><i class="fa-solid fa-thumbs-up"></i></button>
+            <span id="likeCount10">0</span>
+            <div class="row">
+              <div class="col-6 textCol">
+                <h2 class="gameMainText">THE LORD OF THE RINGS</h2>
+                <h4 class="gameSubText">A quest to destroy the One Ring and defeat the dark lord Sauron, in the epic adventure through Middle-earth.</h4>
+                <p class="gameDiscript">"The Lord of the Rings" is a high fantasy novel by J.R.R. Tolkien that follows the journey of hobbit Frodo Baggins as he attempts to destroy the One Ring, a powerful and evil artifact created by the dark lord Sauron. Along the way, Frodo is joined by a fellowship of other characters, including humans, elves, dwarves, and wizards, who are all united in their quest to defeat Sauron and save Middle-earth. The novel is known for its richly detailed world-building, memorable characters, and epic adventures.</p>
+              </div>
+              <div class="col-6">
+                <img class="bookImg" src="./images/the-lord-of-the-rings-the-fellowship-of-the-ring-the-two-towers-the-return-of-the-king.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    </div> 
+    <script src="./Js/jQuery.js"></script>
+    <script src="./Js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
