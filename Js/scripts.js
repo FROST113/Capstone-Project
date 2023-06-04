@@ -4,20 +4,23 @@ const savedItemsContainer = document.querySelector('#saved-items-container');
 // Create a document fragment to hold the saved articles
 const fragment = document.createDocumentFragment();
 
-// Loop through all keys in localStorage that start with 'saved-article-'
-for (const key in localStorage) {
-  if (key.startsWith('saved-article-')) {
-    // Create a new div element to hold the saved article container
-    const savedArticleContainer = document.createElement('div');
-    savedArticleContainer.classList.add('saved-article');
-    savedArticleContainer.id = key;
+// Retrieve the array of saved article IDs from localStorage
+const savedArticleIds = JSON.parse(localStorage.getItem('saved-article-ids')) || [];
 
-    // Set the HTML of the new div to the saved article container HTML
-    savedArticleContainer.innerHTML = localStorage.getItem(key);
+// Loop through the saved article IDs and create saved article containers
+for (const articleId of savedArticleIds) {
+  const key = `saved-article-${articleId}`;
 
-    // Append the saved article container to the fragment
-    fragment.appendChild(savedArticleContainer);
-  }
+  // Create a new div element to hold the saved article container
+  const savedArticleContainer = document.createElement('div');
+  savedArticleContainer.classList.add('saved-article');
+  savedArticleContainer.id = key;
+
+  // Set the HTML of the new div to the saved article container HTML
+  savedArticleContainer.innerHTML = localStorage.getItem(key);
+
+  // Append the saved article container to the fragment
+  fragment.appendChild(savedArticleContainer);
 }
 
 // Append the fragment to the saved items container
@@ -32,8 +35,13 @@ function saveForLater(articleId) {
   // Save the article container to localStorage
   localStorage.setItem(`saved-article-${articleId}`, articleContainer);
 
+  // Store the article ID in the array of saved articles
+  let savedArticleIds = JSON.parse(localStorage.getItem('saved-article-ids')) || [];
+  savedArticleIds.push(articleId);
+  localStorage.setItem('saved-article-ids', JSON.stringify(savedArticleIds));
+
   // Alert the user that the item was saved and how many items there are
-  const savedItemsCount = Object.keys(localStorage).filter(key => key.startsWith('saved-article-')).length;
+  const savedItemsCount = savedArticleIds.length;
   alert(`Item saved! You have ${savedItemsCount} saved item(s).`);
 }
 
@@ -73,3 +81,4 @@ function addLike(articleId) {
   likeCount++;
   document.getElementById('likeCount' + articleId).textContent = likeCount;
 }
+
